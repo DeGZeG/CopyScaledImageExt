@@ -1,0 +1,33 @@
+{
+  "name": "Copy Scaled Image",
+  "description": "Rescale image on copy",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "contextMenus",
+    "clipboardWrite",
+    "clipboardRead"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["plugins/alertify.min.js", "content.js"],
+      "css": ["plugins/alertify.min.css", "content.css"]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Копирование картинок с рескейлом</title>
+    <link rel="stylesheet" type="text/css" href="popup.css" />
+    <meta charset="UTF-8" />
+  </head>
+  <body>
+    <main class="settings">
+      <h1 class="title">Настройки</h1>
+
+      <div class="item">
+        <div class="item__input-container">
+          <label class="item__label" for="size">Максимальный размер одной из сторон</label>
+          <input class="item__input" placeholder="Размер в пикселях" type="number" id="size" />
+        </div>
+        <span class="item__hint">
+          В пикселях.<br>
+          Например, если указать 3000, а размер картинки 3500х2000, то рескейл будет до 3000х1714
+        </span>
+      </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
